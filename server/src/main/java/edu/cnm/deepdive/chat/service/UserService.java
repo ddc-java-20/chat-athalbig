@@ -2,6 +2,7 @@ package edu.cnm.deepdive.chat.service;
 
 import edu.cnm.deepdive.chat.model.dao.UserRepository;
 import edu.cnm.deepdive.chat.model.entity.User;
+import java.net.URL;
 import java.util.UUID;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -39,11 +40,24 @@ public class UserService implements AbstractUserService {
           user.setDisplayName(displayName);
           // TODO: 3/5/25 Set avatar.
           return userRepository.save(user);
-        })
+        });
   }
 
   @Override
   public User update(User user) {
-    return null;
+    return userRepository
+        .findById(getCurrent().getId())
+        .map((u) -> {
+          String displayName = user.getDisplayName();
+          if (displayName != null) {
+            u.setDisplayName(displayName);
+          }
+          URL avatar = user.getAvatar();
+          if (avatar != null) {
+            u.setAvatar(avatar);
+          }
+          return userRepository.save(u);
+        })
+        .orElseThrow();
   }
 }
