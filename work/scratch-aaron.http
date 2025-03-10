@@ -1,0 +1,67 @@
+### Retreive my profile
+GET http://localhost:8090/chat/users/me
+Authorization: Bearer {{bearerToken}}
+
+### Retreive a specific users profile
+GET http://localhost:8090/chat/users/ca870683-7f17-4562-a800-2ef13064dcb8
+Authorization: Bearer {{bearerToken}}
+
+### List all channels
+GET http://localhost:8090/chat/channels
+Authorization: Bearer {{bearerToken}}
+
+### Change active flag on channel
+PUT http://localhost:8090/chat/channels/9d5123a8-8b5c-4145-890c-1872bce9100c/active
+Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+
+true
+
+###
+POST http://localhost:8090/chat/channels
+Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+
+{
+  "name": "trogdor",
+  "active": "true"
+}
+
+###
+GET http://localhost:8090/chat/users/ca870683-7f17-4562-a800-2ef13064dcb8
+Authorization: Bearer {{bearerToken}}
+
+###
+GET http://localhost:8090/chat/channels/8e1b5399-02af-4a19-9f44-c434ecb2e6ba/messages?since=1741636065000
+Authorization: Bearer {{bearerToken}}
+
+###
+POST http://localhost:8090/chat/channels/9d5123a8-8b5c-4145-890c-1872bce9100c/messages
+Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "text": "This is a message being posted to a channel"
+}
+
+###
+POST http://localhost:8090/chat/channels/9d5123a8-8b5c-4145-890c-1872bce9100c/messages
+Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "text": "This is another message, so much message"
+}
+
+###
+POST http://localhost:8090/chat/channels/8e1b5399-02af-4a19-9f44-c434ecb2e6ba/messages
+Authorization: Bearer {{bearerToken}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "text": "Trogdor waas a man.. well, he was a dragon, at least he was a dragon-man"
+}
+
