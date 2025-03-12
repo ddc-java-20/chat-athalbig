@@ -1,8 +1,6 @@
 package edu.cnm.deepdive.chat.controller;
 
 import edu.cnm.deepdive.chat.model.entity.Message;
-import edu.cnm.deepdive.chat.model.entity.User;
-import edu.cnm.deepdive.chat.service.AbstractChannelService;
 import edu.cnm.deepdive.chat.service.AbstractMessageService;
 import edu.cnm.deepdive.chat.service.AbstractUserService;
 import java.time.Instant;
