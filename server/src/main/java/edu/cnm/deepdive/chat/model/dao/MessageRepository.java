@@ -22,7 +22,7 @@ public interface MessageRepository extends JpaRepository<Message, Long> {
       AND
         m.posted > :posted
       ORDER BY
-        m.posted DESC
+        m.posted ASC
       """;
 
   List<Message> getAllByChannelAndPostedAfterOrderByPostedAsc(Channel channel, Instant posted);
