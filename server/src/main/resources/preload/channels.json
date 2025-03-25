@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Admin",
+    "active": true
+  },
+  {
+    "name": "Comics",
+    "active": true
+  },
+  {
+    "name": "Dad Jokes",
+    "active": true
+  }
+]
