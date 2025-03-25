@@ -82,7 +82,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "text": "Spaceman Spiff crash lands on a foreign planet"
+  "text": "This is a long, but not too long message"
 }
 
 ###
