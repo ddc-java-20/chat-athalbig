@@ -4,6 +4,6 @@
   <dimen name="half_dynamic_spacing">8dp</dimen>
   <dimen name="image_button_size">48dp</dimen>
   <dimen name="message_card_radius">8dp</dimen>
-  <dimen name="message_card_elevation">8dp</dimen>
+  <dimen name="message_card_elevation">4dp</dimen>
   <dimen name="half_static_spacing">4dp</dimen>
 </resources>
